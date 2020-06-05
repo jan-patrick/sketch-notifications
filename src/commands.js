@@ -8,8 +8,9 @@ export function showTestAlert() {
 export function editPath() {
   var notificationObject = getSavedSetting(savedSettingName)
   var UI = require('sketch/ui')
+  var document = require('sketch/dom').getSelectedDocument()
   UI.getInputFromUser(
-    "Type in the word / path where you want to get notified when opening a document",
+    "Type in the word / path where you want to get notified when opening a document." + "\n\n" + "Maybe you want use (parts of) this:" + "\n\n" + String(document.path),
     {
       initialValue: notificationObject.path,
     },
@@ -72,7 +73,10 @@ export function editAlertText() {
 }
 
 
-
+export function resetSettings() {
+  newNotificationObject()
+  sendMessageToBottom("Successfully reset.")
+}
 
 // invisible functions
 
@@ -115,7 +119,7 @@ function sendMessageToBottom(dataBottom) {
 function newNotificationObject() {
   var notificationObject = {
     path: "OneDrive",
-    text: "Otherwise you could loose work now or later. Please make sure you did.",
+    text: "Otherwise you could loose work now or later." + "\n\n" + "Please make sure you did.",
     headline: "Did you make a backup already?"
   }
   setSetting(savedSettingName, notificationObject)

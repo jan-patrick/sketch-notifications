@@ -12,7 +12,7 @@
   "suppliesData": false,
   "commands": [
     {
-      "name": "Show test alert",
+      "name": "Show Test Alert",
       "identifier": "notifications.show-test-alert",
       "script": "./commands.js",
       "handler": "showTestAlert",
@@ -48,6 +48,15 @@
       "description": "Set the notification text."
     },
     {
+      "name": "Reset this plugin",
+      "identifier": "notifications.reset",
+      "script": "./commands.js",
+      "handler": "resetSettings",
+      "icon": "icon.png",
+      "iconDark": "icon.png",
+      "description": "Reset to original settings."
+    },
+    {
       "script": "./commands.js",
       "name": "ckeck if Notifications Object already exists and is saved",
       "handlers": {
@@ -78,7 +87,9 @@
         "items": [
           "notifications.edit-path",
           "notifications.edit-alert-headline",
-          "notifications.edit-alert-text"
+          "notifications.edit-alert-text",
+          "-",
+          "notifications.reset"
         ]
       }
     ]
