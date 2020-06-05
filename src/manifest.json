@@ -25,8 +25,8 @@
       "identifier": "notifications.edit-path",
       "script": "./commands.js",
       "handler": "editPath",
-      "icon": "icon.png",
-      "iconDark": "icon.png",
+      "icon": "light-text.png",
+      "iconDark": "dark-text.png",
       "description": "Set the string this plugin should watch out for."
     },
     {
@@ -34,8 +34,8 @@
       "identifier": "notifications.edit-alert-headline",
       "script": "./commands.js",
       "handler": "editAlertHeadline",
-      "icon": "icon.png",
-      "iconDark": "icon.png",
+      "icon": "light-text.png",
+      "iconDark": "dark-text.png",
       "description": "Set the notification headline."
     },
     {
@@ -43,8 +43,8 @@
       "identifier": "notifications.edit-alert-text",
       "script": "./commands.js",
       "handler": "editAlertText",
-      "icon": "icon.png",
-      "iconDark": "icon.png",
+      "icon": "light-text.png",
+      "iconDark": "dark-text.png",
       "description": "Set the notification text."
     },
     {
@@ -52,8 +52,8 @@
       "identifier": "notifications.reset",
       "script": "./commands.js",
       "handler": "resetSettings",
-      "icon": "icon.png",
-      "iconDark": "icon.png",
+      "icon": "light-reset.png",
+      "iconDark": "dark-reset.png",
       "description": "Reset to original settings."
     },
     {
