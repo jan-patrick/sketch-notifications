@@ -21,7 +21,7 @@
       "description": "Displays an example alert, that you should get if you open the file normally."
     },
     {
-      "name": "Set String",
+      "name": "Set Trigger Path / Word",
       "identifier": "notifications.edit-path",
       "script": "./commands.js",
       "handler": "editPath",
@@ -30,7 +30,16 @@
       "description": "Set the string this plugin should watch out for."
     },
     {
-      "name": "Set Notification Text",
+      "name": "Set the Notifications' Headline",
+      "identifier": "notifications.edit-alert-headline",
+      "script": "./commands.js",
+      "handler": "editAlertHeadline",
+      "icon": "icon.png",
+      "iconDark": "icon.png",
+      "description": "Set the notification headline."
+    },
+    {
+      "name": "Set the Notifications' Text",
       "identifier": "notifications.edit-alert-text",
       "script": "./commands.js",
       "handler": "editAlertText",
@@ -68,6 +77,7 @@
         "title": "Settings",
         "items": [
           "notifications.edit-path",
+          "notifications.edit-alert-headline",
           "notifications.edit-alert-text"
         ]
       }
