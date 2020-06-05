@@ -21,22 +21,42 @@
       "description": "Displays an example alert, that you should get if you open the file normally."
     },
     {
-      "name": "Show test alert",
+      "name": "Set String",
       "identifier": "notifications.edit-path",
       "script": "./commands.js",
-      "handler": "showTestAlert",
+      "handler": "editPath",
       "icon": "icon.png",
       "iconDark": "icon.png",
-      "description": "Displays an example alert, that you should get if you open the file normally."
+      "description": "Set the string this plugin should watch out for."
     },
     {
-      "name": "Show test alert",
+      "name": "Set Notification Text",
       "identifier": "notifications.edit-alert-text",
       "script": "./commands.js",
-      "handler": "showTestAlert",
+      "handler": "editAlertText",
       "icon": "icon.png",
       "iconDark": "icon.png",
-      "description": "Displays an example alert, that you should get if you open the file normally."
+      "description": "Set the notification text."
+    },
+    {
+      "script": "./commands.js",
+      "name": "ckeck if Notifications Object already exists and is saved",
+      "handlers": {
+        "actions": {
+          "Startup": "checkIfNotificationsAlreadySaved"
+        }
+      },
+      "identifier": "notifications.chech-if-notifications-exists"
+    },
+    {
+      "script": "./commands.js",
+      "name": "ckeck if a notification has to displayed",
+      "handlers": {
+        "actions": {
+          "OpenDocument": "checkIfNotification"
+        }
+      },
+      "identifier": "notifications.check-if-notification"
     }
   ],
   "menu": {
