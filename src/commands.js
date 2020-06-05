@@ -16,13 +16,12 @@ export function editAlertText() {
 
 export function checkIfNotification() {
   var notificationObject = getSavedSetting(savedSettingName)
-  sendAlert(String(notificationObject))
   var document = require('sketch/dom').getSelectedDocument()
-  sendAlert(String(document).includes(notificationObject.path))
-  if (String(document).includes(notificationObject.path)) {
+  sendAlert(String(notificationObject.path) + String(document.path))
+  sendAlert(String(document.path).includes(notificationObject.path))
+  if (String(document.path).includes(notificationObject.path)) {
   sendAlert(notificationObject.text)
   }
-  sendAlert(String(document))
 }
 
 export function checkIfNotificationsAlreadySaved() {
