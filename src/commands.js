@@ -14,14 +14,15 @@ export function editAlertText() {
 
 // invisible functions
 
-export function checkIfNotification() {
-  var notificationObject = getSavedSetting(savedSettingName)
-  var document = require('sketch/dom').getSelectedDocument()
-  sendAlert(String(notificationObject.path) + String(document.path))
-  sendAlert(String(document.path).includes(notificationObject.path))
-  if (String(document.path).includes(notificationObject.path)) {
-  sendAlert(notificationObject.text)
-  }
+export function checkIfNotification(context) {
+
+  setTimeout(function () {
+    var notificationObject = getSavedSetting(savedSettingName)
+    var document = require('sketch/dom').getSelectedDocument()
+    if (String(document.path).includes(notificationObject.path)) {
+      sendAlert(notificationObject.text)
+    }
+  }, 1);
 }
 
 export function checkIfNotificationsAlreadySaved() {
