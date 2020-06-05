@@ -1,17 +1,56 @@
 {
   "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Notifications",
+  "description": "Displays an notification when opening a document saved at a certain path.",
+  "author": "Jan Schneider",
+  "authorEmail": "hello@jan-patrick.de",
+  "homepage": "https://github.com/jan-patrick/sketch-notifications",
+  "bundleVersion": 1,
+  "version": "0.1.1",
+  "identifier": "com.github.jan-patrick.sketch_notifications",
   "icon": "icon.png",
+  "suppliesData": false,
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "notifications.my-command-identifier",
-      "script": "./my-command.js"
+      "name": "Show test alert",
+      "identifier": "notifications.show-test-alert",
+      "script": "./commands.js",
+      "handler": "showTestAlert",
+      "icon": "icon.png",
+      "iconDark": "icon.png",
+      "description": "Displays an example alert, that you should get if you open the file normally."
+    },
+    {
+      "name": "Show test alert",
+      "identifier": "notifications.edit-path",
+      "script": "./commands.js",
+      "handler": "showTestAlert",
+      "icon": "icon.png",
+      "iconDark": "icon.png",
+      "description": "Displays an example alert, that you should get if you open the file normally."
+    },
+    {
+      "name": "Show test alert",
+      "identifier": "notifications.edit-alert-text",
+      "script": "./commands.js",
+      "handler": "showTestAlert",
+      "icon": "icon.png",
+      "iconDark": "icon.png",
+      "description": "Displays an example alert, that you should get if you open the file normally."
     }
   ],
   "menu": {
-    "title": "notifications",
+    "title": "Notifications",
     "items": [
-      "notifications.my-command-identifier"
+      "notifications.show-test-alert",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "notifications.edit-path",
+          "notifications.edit-alert-text"
+        ]
+      }
     ]
   }
 }
